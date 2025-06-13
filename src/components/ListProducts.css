@@ -1,0 +1,24 @@
+table {
+  width: 100%; /* Define a largura da tabela */
+  border-collapse: collapse; /* Remove as bordas entre as células */
+ 
+}
+
+th, td {
+  border: 1px solid rgb(131, 131, 131); /* Define a borda das células */
+  padding: 8px; /* Adiciona espaço interno às células */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+th {
+  background-color: #f2f2f2; /* Define a cor de fundo do cabeçalho */
+  font-weight: bold; /* Define a fonte do cabeçalho como negrito */
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* Define uma cor de fundo para linhas pares */
+}
+img{
+  width: 95px;
+  height: 75px;
+}

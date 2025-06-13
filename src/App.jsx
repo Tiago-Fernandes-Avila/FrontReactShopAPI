@@ -1,6 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import { Product } from './Classes/ProductClass';
+
+import ListProducts from './components/ListProducts';
 
 const App = () => {
   const [nomeProd, setNomeProd] = useState('');
@@ -33,7 +35,7 @@ const App = () => {
      description: descriptionProd, 
      imgUrl : imgUrlProd
     };
-
+ 
     fetch('http://localhost:8080/products/new', {
       method: 'POST',
       headers: {
@@ -41,7 +43,7 @@ const App = () => {
       },
       body: JSON.stringify(prod)
     })
-      .then(response => {
+      .then((response) => {
         if (response.ok) {
           return response.json();
         } else {
@@ -61,7 +63,17 @@ const App = () => {
       setImgUrlProd('')
       const form = document.getElementById('form1');
       form.reset();
-  }
+     
+    }
+
+
+     
+
+      
+
+
+
+  
 
   return (
     <>
@@ -101,6 +113,7 @@ const App = () => {
       </form>
 
       <h2>nome: {nomeProd}, <br/> price: {priceProd}</h2>
+       <ListProducts/>
     </>
   );
 };
